@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Samantha Autrey</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script>
+            let i = 0;
+            const text = "Samantha Autrey";
+            const roleText = "Front-End Engineer | UI/UX Designer";
+            const speed = 50; /* The speed/duration of the effect in milliseconds */
+            const roleSpeed = 25;
+            function typeWriter() {
+                if (i < text.length) {
+                    document.getElementById("typewriter").innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                } else{
+                    typeRole();
+                }
+            }
+            let j = 0;
+            function typeRole() {
+                if (j < roleText.length) {
+                    document.getElementById("role-header").innerHTML += roleText.charAt(j);
+                    j++;
+                    setTimeout(typeRole, roleSpeed);
+                }
+            }
+
+            window.addEventListener("DOMContentLoaded", function() {
+                typeWriter();
+            });
+        </script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <h3>Samantha Autrey</h3>
+            </div>
+            <nav class="nav">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="experience.html">Experience</a>
+            </nav>
+            <div class="social-bar">
+                <a href="https://www.linkedin.com/in/samantha-autrey-2b4b621b4/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Sammeia" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-github"></i>
+                </a>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <h4 class="email">samiautrey@gmail.com</h4>
+            </div>
+        </header>
+        <div class="home">
+            <div class="intro-container">
+                <div class="intro bubble">
+                    <h1 class="name" id="typewriter"></h1>
+                    <br>
+                    <h2 id="role-header"></h2>
+                    <br>
+                    <a href="images/resume.pdf" class="resume" download="Samantha_Autrey_Resume">Resume</a>
+                </div>
+                <div class="about-me bubble">
+                    <h4>
+                        Computer Engineering & Applied Mathematics student at the University of Washington’s Paul Allen School with experience building scalable, customer-focused front-end applications. 
+                        Demonstrated success in optimizing UI/UX, accessibility, and performance. 
+                        Skilled in collaborating across disciplines and delivering high-quality products ahead of schedule. 
+                        Passionate about bringing strong problem-solving skills and a foundation in cybersecurity to help deliver secure, seamless digital experiences at a global scale.
+                    </h4>
+                </div>
+            </div>
+            <div class="profile-pic">
+                <img src="images/Profile.JPG" alt="Profile Picture">
+            </div>
+        </div>
+    </body>
+</html>
