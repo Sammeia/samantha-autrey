@@ -223,28 +223,76 @@ footer{
     text-align: center;
     padding: 1rem;
 }
-@media (max-width: 600px){
+#open-sidebar-button, #close-sidebar-button{
+    display: none;
+    background: none;
+    border: none;
+    font-size: 3.0rem;
+    cursor: pointer;
+    color: black;
+}
+#overlay{
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    display: none;
+    transition: left 0.5s ease-in-out;
+}
+@media (max-width: 700px){
     .header{
         justify-content: center;
         flex-direction: column;
         align-items: center;
     }
+    .experience, .about{
+        margin-top: 100px;
+    }
+    .projects{
+        margin-bottom: 300px;
+    }
     .home{
         flex-direction: column;
         width: 100%;
         gap: 20px;
-        margin-top: 200px;
+        margin-top: 100px;
         align-items: center;
     }
     .name{
         font-size: 40px;
     }
+    #open-sidebar-button, #close-sidebar-button{
+        display: block;
+    }
+    .header{
+       position: fixed;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       top: 0;
+       left: -100%;
+       height: 100vh;
+       width: min(15em, 100%);
+       z-index: 10;
+       background-color: white;
+       border-left: 1px solid black;
+       transition: left 0.3s ease-in-out;
+    }
+    .header.show{
+        left: 0;
+    }
+    .header.show ~ #overlay{
+        display: block;
+    }
     .nav{
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        gap: 10px;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 1.5em;
+    }
+    .social-bar{
+        flex-direction: column;
+        margin-left: 50px;
     }
     #about-experience-bubble{
         flex-direction: column;

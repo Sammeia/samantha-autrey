@@ -10,7 +10,13 @@
         <script src="script.js" defer></script>
     </head>
     <body>
-        <header class="header">
+        <button id="open-sidebar-button" onclick="openSidebar()">
+            <i class="fa fa-bars" height="40px" aria-hidden="true"></i>
+        </button>
+        <header class="header" id="sidebar">
+            <button id="close-sidebar-button" onclick="closeSidebar()">
+                <i class="fa fa-times" height="40px" aria-hidden="true"></i>
+            </button>
             <div class="logo">
                 <h3>Samantha Autrey</h3>
             </div>
@@ -31,6 +37,7 @@
                 <h4 class="email">samiautrey@gmail.com</h4>
             </div>
         </header>
+        <div id="overlay" onclick="closeSidebar()"></div>
         <body>
             <div class="experience">
                     <div class="bubble" id="experience-bubble">
