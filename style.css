@@ -261,7 +261,13 @@ footer{
         align-items: center;
         align-content: center;
     }
-    .intro-container{
+    .intro, .about-me {
+        width: 80vw;
+        max-width: 90%;
+        height: auto;
+    }
+    .intro-container {
+        width: 80vw;
         max-width: 90%;
     }
     .profile-pic{
