@@ -261,6 +261,9 @@ footer{
         align-items: center;
         align-content: center;
     }
+    .intro-container{
+        max-width: 90%;
+    }
     .profile-pic{
         width: 75%;
         height: auto;
