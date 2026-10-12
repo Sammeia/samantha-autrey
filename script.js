@@ -1,6 +1,6 @@
 let i = 0;
             const text = "Samantha Autrey";
-            const roleText = "Front-End Engineer | UI/UX Designer";
+            const roleText = "Front-End Engineer | UI/UX Designer | Embedded Hardware Engineer";
             const speed = 50; /* The speed/duration of the effect in milliseconds */
             const roleSpeed = 25;
             function typeWriter() {
